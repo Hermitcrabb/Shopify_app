@@ -40,6 +40,32 @@ ecommerce-project/
     │   └── Utils/      # API services and helpers
 ```
 
+## ⚓ Webhooks (Shopify Integration)
+
+The backend includes a dedicated endpoint to handle real-time updates from Shopify. This ensures that the local database remains synchronized with store activity.
+
+### Endpoint
+
+- **URL**: `POST /webhook/shopify`
+- **Security**: Mandatory HMAC verification using `X-Shopify-Hmac-Sha256` header.
+
+### Handled Topics
+
+- `orders/create`: Triggered when a new order is placed.
+- `orders/updated`: Triggered when any detail of an order changes.
+- `orders/fulfilled`: Triggered when an order is marked as fulfilled.
+- `orders/paid`: Triggered when payment is successful.
+- `orders/partially_fulfilled`: Triggered for partial shipments.
+
+### Processing Logic
+
+1. **Verification**: Validates the request signature using the `SHOPIFY_WEBHOOK_SECRET`.
+2. **Data Enrichment**: Fetches the complete order details via the Shopify Admin API for accuracy.
+3. **Storage**:
+   - Saves the full raw payload to the `orders` collection.
+   - Extracts and flattens line items into the `order_line_item` collection for easier analytics.
+4. **Analytics Refresh**: Automatically triggers a background process to update sales and refund metrics.
+
 ## ⚙️ Setup Instructions
 
 ### Prerequisites
