@@ -1,0 +1,124 @@
+/* AdminAuth.css */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #f5f6fa;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Form layout */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.15);
+}
+
+.form-group input:disabled {
+  background: #f1f1f1;
+  cursor: not-allowed;
+}
+
+/* Button */
+.auth-button {
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.1s ease;
+}
+
+.auth-button:hover:not(:disabled) {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+.auth-button:disabled {
+  background: #999;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Links section */
+.auth-links {
+  margin-top: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.auth-links span {
+  color: #555;
+}
+
+.auth-links a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* Secondary link */
+.user-login-link {
+  color: #777;
+  font-size: 13px;
+}

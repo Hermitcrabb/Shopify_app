@@ -1,0 +1,17 @@
+/* src/css/scss/_navbar.scss */
+
+/* Custom navbar styling ONLY */
+
+.navbar {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+}

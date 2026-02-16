@@ -1,0 +1,18 @@
+// 1️⃣ Bootstrap functions
+@import "bootstrap/scss/functions";
+
+// 2️⃣ Bootstrap variables
+@import "bootstrap/scss/variables";
+
+// 3️⃣ Your overrides
+@import "variables";
+
+// 4️⃣ Bootstrap maps & mixins
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+// 5️⃣ Bootstrap core
+@import "bootstrap/scss/bootstrap";
+
+// 6️⃣ Your custom styles
+@import "navbar";
